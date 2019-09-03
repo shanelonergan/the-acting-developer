@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Streamline your workflow with custom terminal commands!"
+title:  "Welcome to Jekyll!"
 date:   2019-09-02
 categories: jekyll update
 ---

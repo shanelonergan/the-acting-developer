@@ -2,8 +2,10 @@
 layout: post
 title:  "Streamline your workflow with custom terminal commands"
 date:   2019-09-02
-categories: jekyll update
+categories: [programming, how-to]
 ---
+
+![custom bash command lazygit running in a terminal](/images/lazygit-bash-command.jpg)
 
 As a young programmer, interacting with my computer through the terminal (or bash) can still sometimes feel foreign and clunky. I am in fifth week at The Flatiron School’s Access Labs Software Engineering program, and we work through a lot of labs as part of the curriculum. In order to work on each lab, I would have to follow a series of steps just to open it:
 
@@ -27,16 +29,16 @@ In this article I will walk through how to create custom bash commands in Unix-b
 
 Adding custom commands can be done in just 4 easy steps:
 
-# 1. Open your bash profile document:
+# 1. Open your bash profile document
 
-Each time you open a new terminal session, it loads up your preferences from a hidden document. Files related to the terminal are typically hidden, or invisible, files. These files have a `.` at the beginning of their name, don’t show up in finder searches, and are usually stored in the root directory. For our purposes we only need to know how to view, open, and create these files, but for more information see the further reading below. In order to view these files, enter the following commands in your terminal:
+Each time you open a new terminal session, it loads up your preferences from a hidden document. Files related to the terminal are typically hidden, or invisible, files. These files have a `.` at the beginning of their name, don’t show up in finder searches, and are usually stored in the root directory. For our purposes we only need to know how to view, open, and create these files, but for more information see the further reading below[^1]. In order to view these files, enter the following commands in your terminal:
 
 	$ cd ..
 	$ ls -a
 
 This will print out all of the files saved to your root directory. You should see a file named `.bash_profile`. Go ahead and open that in any text editor. Now, you could add your custom commands anywhere in this document, but in the spirit of readable code we will want to create a new document with all of our new commands, and simply link to that document in our bash profile.
 
-# 2. Create a custom commands file:
+# 2. Create a custom commands file
 
 To create a new invisible file, enter the following command in your terminal:
 
@@ -63,7 +65,7 @@ Now try out the new command:
 
 You should see `Hello Shane!` (or whatever name you give as an argument), printed out. Congrats! You have just made your first custom bash command. However, using the above would require you to run the source command even time you opened a new terminal. If we link to this file in our bash profile, our new commands will come pre-loaded in every new terminal session.
 
-# 3. Link to the file in your bash profile.
+# 3. Link to the file in your bash profile
 
 Back in your .bash_profile document, add the same command we ran earlier, `source ~/.my_custom_commands.sh`, anywhere you would like. This will simply run that source command, linking to your custom commands, every time you open a new terminal. To access these commands, you can either run `source ~/.bash_profile` or close your terminal and open up a new session.
 
@@ -112,12 +114,17 @@ function boom {
 
 ---
 
-Note: this guide is written primarily for MacOS users. It should work for any UNIX based operating system (such as Linux), but if you are experiencing any issues I suggest looking into whether your computer uses a login or non-login shell. If non-login, replacing .bash_profile with .bashrc (run control) in the above instructions should work.
+Note: this guide is written primarily for MacOS users. It should work for any UNIX based operating system (such as Linux), but if you are experiencing any issues I suggest looking into whether your computer uses a login or non-login shell[^2]. If non-login, replacing .bash_profile with .bashrc (run control) in the above instructions should work.
 
 ---
 
+# References
+
+- [How to create your own custom terminal commands](https://medium.com/devnetwork/how-to-create-your-own-custom-terminal-commands-c5008782a78e)
+- [What is a bash script?](https://ryanstutorials.net/bash-scripting-tutorial/bash-script.php)
+- [What is the difference between .bash_profile and .bashrc?](https://ryanstutorials.net/bash-scripting-tutorial/bash-script.php)
+
 # Further Reading
 
--https://medium.com/devnetwork/how-to-create-your-own-custom-terminal-commands-c5008782a78e
-
-# References
+[^1]:[Show hidden files and folders on mac](https://nektony.com/how-to/show-hidden-files-on-mac)
+[^2]:[Non-login shell and Login Shell](https://www.unixmen.com/non-login-shell-login-shell/)
