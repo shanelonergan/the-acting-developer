@@ -65,7 +65,7 @@ You should see `Hello Shane!` (or whatever name you give as an argument), printe
 
 # 3. Link to the file in your bash profile.
 
-Back in your .bash_profile document, add the same command we ran earlier, `source ~/.my_custom_commands.sh`, anywhere you would like. This will simply run that source command, linking to your custom commands, every time you open a new terminal. To access these commands, you can either run `source ~/.bash_profile` or close your terminal and open up a new session. 
+Back in your .bash_profile document, add the same command we ran earlier, `source ~/.my_custom_commands.sh`, anywhere you would like. This will simply run that source command, linking to your custom commands, every time you open a new terminal. To access these commands, you can either run `source ~/.bash_profile` or close your terminal and open up a new session.
 
 # 4. Write your custom commands!
 
@@ -113,3 +113,11 @@ function boom {
 ---
 
 Note: this guide is written primarily for MacOS users. It should work for any UNIX based operating system (such as Linux), but if you are experiencing any issues I suggest looking into whether your computer uses a login or non-login shell. If non-login, replacing .bash_profile with .bashrc (run control) in the above instructions should work.
+
+---
+
+# Further Reading
+
+-https://medium.com/devnetwork/how-to-create-your-own-custom-terminal-commands-c5008782a78e
+
+# References
