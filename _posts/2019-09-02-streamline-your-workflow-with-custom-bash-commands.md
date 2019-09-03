@@ -7,21 +7,21 @@ categories: jekyll update
 
 As a young programmer, interacting with my computer through the terminal (or bash) can still sometimes feel foreign and clunky. I am in fifth week at The Flatiron School’s Access Labs Software Engineering program, and we work through a lot of labs as part of the curriculum. In order to work on each lab, I would have to follow a series of steps just to open it:
 
-  1. Fork it from the Github page
-  2. Clone it into a local directory
-  3. Navigate into the lab folder
-  4. Bundle install the proper Ruby gems (for Ruby/ Ruby on Rails labs)
-  5. Open the project in my text editor
+1. Fork it from the Github page
+2. Clone it into a local directory
+3. Navigate into the lab folder
+4. Bundle install the proper Ruby gems (for Ruby/ Ruby on Rails labs)
+5. Open the project in my text editor
 
 Five steps just to get the lab open on my computer! After a while, I realized that there had to be a better way. As it turns out, this all can be streamlined into one easy step. Enter custom bash commands.
 
 In this article I will walk through how to create custom bash commands in Unix-based operating systems (Mac OS and Linux). These are custom commands you can input in your bash/terminal that either shorten an existing command or execute a pre-defined series. Some examples of what you can accomplish are:
 
-	1. Easily navigate into a directory with a long file path
-  2. Git add, commit, push, and merge with one command.
-	3. Easily bundle install, migrate, and seed a newly opened project.
-	4. Download a mp3 version of a youtube video from your terminal.
-	5. Whatever else you can think of!
+- Easily navigate into a directory with a long file path
+- Git add, commit, push, and merge with one command.
+- Easily bundle install, migrate, and seed a newly opened project.
+- Download a mp3 version of a youtube video from your terminal.
+- Whatever else you can think of!
 
 ### Creating the custom commands
 
@@ -65,8 +65,7 @@ You should see `Hello Shane!` (or whatever name you give as an argument), printe
 
 # 3. Link to the file in your bash profile.
 
-Back in your .bash_profile document, add the same command we ran earlier, `source ~/.my_custom_commands.sh`, anywhere you would like. This will simply run that source command, linking to your custom commands, every time you open a new terminal.
-
+Back in your .bash_profile document, add the same command we ran earlier, `source ~/.my_custom_commands.sh`, anywhere you would like. This will simply run that source command, linking to your custom commands, every time you open a new terminal. To access these commands, you can either run `source ~/.bash_profile` or close your terminal and open up a new session. 
 
 # 4. Write your custom commands!
 
@@ -110,5 +109,7 @@ function boom {
     atom .
 }
 ```
+
+---
 
 Note: this guide is written primarily for MacOS users. It should work for any UNIX based operating system (such as Linux), but if you are experiencing any issues I suggest looking into whether your computer uses a login or non-login shell. If non-login, replacing .bash_profile with .bashrc (run control) in the above instructions should work.
